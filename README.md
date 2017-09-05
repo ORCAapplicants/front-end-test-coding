@@ -16,9 +16,8 @@ Principalmente los siguientes aspectos:
 2. Se requiere de una cuenta de **GitHub** para realizar este ejercicio.
 3. Recomendamos utilizar un máximo de **3 (tres) horas** y enviar todo lo que puedas.
 4. **Antes de comenzar a programar:**
-  * Clonar este repositorio.
-  * Crear un `branch` utilizando tu nombre completo.
-  * Al terminar, enviar tus avances con un `pull request`.
+    * Clonar este repositorio.
+    * Crear un `branch` utilizando tu nombre completo.
 
 
 ## EJERCICIO PRÁCTICO
@@ -27,28 +26,29 @@ Principalmente los siguientes aspectos:
 #### Requerimientos generales
 
 1. La aplicación debe cumplir con los siguientes **requisitos funcionales:**
-  - Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada.
 
-  - Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (`'user.login'`) y el id (`'user.id'`) de cada registro.
+    - Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada.
 
-  - Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad `'user.login'` como parámetro.
+    - Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (`'user.login'`) y el id (`'user.id'`) de cada registro.
 
-  - Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME
+    - Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad `'user.login'` como parámetro.
 
-  - Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente.
+    - Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME
 
-  - Agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.
+    - Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente.
 
-  - Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“gcpglobal”**.
+    - Agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.
 
-  - Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.
+    - Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“gcpglobal”**.
 
-  - Agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**.
+    - Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.
 
-  - Incluir un componente para mostrar mensajes de Error en toda la aplicación.
+    - Agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**.
+
+    - Incluir un componente para mostrar mensajes de Error en toda la aplicación.
 
 2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.
 
 3. **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
 
-4. Finalmente, realizar un `commit` de tu proyecto, y enviar la URL del mismo a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com?Subject=Prueba%20Front-end).
+4. Al terminar, enviar tus avances con un `push request` de tu proyecto, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
