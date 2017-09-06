@@ -1,24 +1,27 @@
 # Prueba Técnica - Programador (Front-end)
-Prueba para postulantes a programador Front-end _ORCA_.
+La siguiente es una prueba para evaluar a los postulantes a programador **Front-end ORCA**.
 
 ## INTRODUCCIÓN
 Este repositorio contiene una serie de requerimientos de un Caso Práctico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología de _GCP Global_.
 
 #### ¿Qué se busca evaluar?
 Principalmente los siguientes aspectos:
-  + Comprensión de los requerimientos,
-  + Calidad del código entregado (estructura),
+  + Creatividad para resolver los requerimientos,
+  + Calidad del código entregado (estructura y buenas prácticas),
   + Eficiencia de los algoritmos entregados,
   + Familiaridad con Frameworks y plataformas de desarrollo Web (**HTML**, **CSS3**, **JavaScript** y **[Angular](https://angular.io/)**).
 
 ## IMPORTANTE
 1. Asegúrate de tener `Node.js` y `npm` instalados.
-2. Se requiere de una cuenta de **GitHub** para realizar este ejercicio.
-3. Recomendamos utilizar un máximo de **3 (tres) horas** y enviar todo lo que puedas.
+2. Recomendamos emplear un máximo de **3 (tres) horas** y enviar todo lo que puedas.
+3. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
 4. **Antes de comenzar a programar:**
-    * Clonar este repositorio.
-    * Crear un `branch` utilizando tu nombre completo.
-
+    * Realizar un `Fork` de este repositorio (https://github.com/ORCAapplicants/front-end-test-coding).
+    * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
+    * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
+5. **Al finalizar**, exiten dos opciones para entregar su proyecto:
+    * 1) Realizar un `Commit` de su proyecto, enviar un `Pull Request` al branch con su Nombre, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
+    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
 
 ## EJERCICIO PRÁCTICO
 **Objetivo:** Crear una aplicación (Angular + Bootstrap) que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, a través del API pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
@@ -50,5 +53,3 @@ Principalmente los siguientes aspectos:
 2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.
 
 3. **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
-
-4. Al terminar, enviar tus avances con un `push request` de tu proyecto, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
