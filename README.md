@@ -20,12 +20,12 @@ Principalmente los siguientes aspectos:
     * Realizar un `Fork` de este repositorio (https://github.com/ORCAapplicants/front-end-test-coding).
     * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
-6. **Al finalizar**, exiten dos opciones para entregar su proyecto:
+6. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
     * 1) Realizar un `Commit` de su proyecto, enviar un `Pull Request` al branch con su Nombre, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
     * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
 
 ## EJERCICIO PRÁCTICO
-**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, a través del API pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
+**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, explotando el API Rest pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
 
 #### Requerimientos generales
 
