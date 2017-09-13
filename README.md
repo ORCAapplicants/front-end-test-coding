@@ -13,18 +13,19 @@ Principalmente los siguientes aspectos:
 
 ## IMPORTANTE
 1. Asegúrate de tener `Node.js` y `npm` instalados.
-2. Recomendamos emplear un máximo de **3 (tres) horas** y enviar todo lo que puedas.
-3. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
-4. **Antes de comenzar a programar:**
+2. Se solicita crear la aplicación utilizando la tecnología Web de su elección, se privilegiarán a los candidatos que utilicen **Angular + Bootstrap**.
+3. Recomendamos emplear un máximo de **3 (tres) horas** y enviar todo lo que puedas.
+4. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
+5. **Antes de comenzar a programar:**
     * Realizar un `Fork` de este repositorio (https://github.com/ORCAapplicants/front-end-test-coding).
     * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
-5. **Al finalizar**, exiten dos opciones para entregar su proyecto:
+6. **Al finalizar**, exiten dos opciones para entregar su proyecto:
     * 1) Realizar un `Commit` de su proyecto, enviar un `Pull Request` al branch con su Nombre, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
     * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
 
 ## EJERCICIO PRÁCTICO
-**Objetivo:** Crear una aplicación (Angular + Bootstrap) que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, a través del API pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
+**Objetivo:** Crear una aplicación que ayude a obtener una lista de usuarios y muestre la información de sus perfiles, a través del API pública de GitHub https://api.github.com/search/users?q=YOUR_NAME.
 
 #### Requerimientos generales
 
@@ -40,15 +41,15 @@ Principalmente los siguientes aspectos:
 
     - Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente.
 
-    - Agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.
-
     - Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“gcpglobal”**.
 
     - Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.
 
-    - Agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**.
-
     - Incluir un componente para mostrar mensajes de Error en toda la aplicación.
+
+    - _Si estas utilizando Angular,_ agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.
+
+    - _Si estas utilizando Angular,_ agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**.
 
 2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.
 
