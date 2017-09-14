@@ -9,11 +9,11 @@ Principalmente los siguientes aspectos:
   + Creatividad para resolver los requerimientos,
   + Calidad del código entregado (estructura y buenas prácticas),
   + Eficiencia de los algoritmos entregados,
-  + Familiaridad con Frameworks y plataformas de desarrollo Web (**HTML**, **CSS3**, **JavaScript** y **[Angular](https://angular.io/)**).
+  + Familiaridad con Frameworks y plataformas de desarrollo Web.
 
 ## IMPORTANTE
 1. Asegúrate de tener `Node.js` y `npm` instalados.
-2. Se solicita crear la aplicación utilizando la tecnología Web de su elección, se privilegiarán a los candidatos que utilicen **Angular + Bootstrap**.
+2. Se solicita crear la aplicación utilizando la tecnología Web de su elección, se privilegiarán a los candidatos que utilicen **[Angular](https://angular.io/)**(2 o superior) + **Bootstrap**.
 3. Recomendamos emplear un máximo de **3 (tres) horas** y enviar todo lo que puedas.
 4. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
 5. **Antes de comenzar a programar:**
@@ -21,7 +21,7 @@ Principalmente los siguientes aspectos:
     * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 6. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
-    * 1) Realizar un `Commit` de su proyecto, enviar un `Pull Request` al branch con su Nombre, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
+    * 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
     * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
 
 ## EJERCICIO PRÁCTICO
