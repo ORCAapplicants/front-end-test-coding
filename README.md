@@ -54,3 +54,19 @@ Principalmente los siguientes aspectos:
 2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.
 
 3. **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
+
+
+
+
+
+
+
+
+
+************************
+Para hacerlo funcionar primero debes usar:
+```
+  npm install //instala todas las dependencias
+  gulp dev  //compila todo el codigo .js y .scss
+  npm start //inicia el servidor
+```

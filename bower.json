@@ -1,0 +1,31 @@
+{
+  "name": "Front-end-test-coding",
+  "description": "Front-end-test-coding",
+  "version": "0.0.0",
+  "homepage": "https://github.com/",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-ui-router": "0.3.1",
+    "angular-mocks": "~1.5.0",
+    "angular-modal-service": "~0.10.1",
+    "angular-i18n": "*",
+    "html5-boilerplate": "^5.3.0",
+    "jquery-ui": "~1.12.0",
+    "bootstrap": "~3.3.7",
+    "jquery-validate": "~1.15.1",
+    "jpkleemans-angular-validate": "~1.1.1",
+    "restangular": "~1.5.2",
+    "lodash": "~4.15.0",
+    "angular-ui-mask": "~1.8.7",
+    "ng-tags-input": "~3.1.1",
+    "angularjs-toaster": "~2.0.0",
+    "angular-block-ui": "*"
+  },
+  "resolutions": {
+    "angular": "~1.5.0"
+  }
+}

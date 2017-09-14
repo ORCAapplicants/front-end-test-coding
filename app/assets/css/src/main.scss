@@ -1,0 +1,25 @@
+
+// imports of the variables and all stylesheets related to the app
+@import 'variables';
+
+.loaded{height:auto;}
+@media (max-width: 991px) {
+  .loaded{height:100%;}
+
+}
+
+.bananaPink{background-color: $mainer;}
+
+home{
+  .data{
+    input{width: 45%}
+    input,button{display:inline-block;}
+  }
+  table{margin-top:15px;
+    tbody tr{cursor:pointer}
+  }
+}
+
+.modal-backdrop.fade.in{
+  height:100% !important; position:fixed !important;
+}

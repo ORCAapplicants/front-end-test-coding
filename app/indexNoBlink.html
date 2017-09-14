@@ -1,0 +1,24 @@
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="page-container sidebar-collapsed">
+
+  <!-- Left menu shared across all views -->
+  <myapp-menuleft class="shared" ng-if="showHeadFoot"></myapp-menuleft>
+
+
+  <div class="main-content" >
+    <!-- Header Block shared across all views -->
+    <div  class="sharedContent" ng-if="showHeadFoot">
+      <myapp-header class="shared"></myapp-header>
+    </div>
+
+    <!--  Main block where is going to be render every module of the app-->
+    <div ui-view class="viewContentAngular"></div>
+
+    <!--  Footer Block shared across all views -->
+    <div class="sharedContent">
+      <myapp-footer ng-if="showHeadFoot" class="shared"></myapp-footer>
+    </div>
+  </div>
+</div>

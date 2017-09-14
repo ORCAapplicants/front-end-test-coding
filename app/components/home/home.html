@@ -1,0 +1,31 @@
+<home >
+  <section class="container">
+    <h1 class="">
+      Página de prueba para puesto de Front end
+      <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+    </h1>
+    <p class="data col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+      Por favor introduce tu nombre de usuario de Github para poder avanzar<br>
+      <input type="text" name="username" id="username" class="form-control" placeholder="GitHub User">
+      <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="getUsers()">
+        Adelante
+      </button>
+    </p>
+  </section>
+  <section ng-if="myInterestedResults.length > 0" class="container">
+    <table class="table table-striped col-md-8 col-sm-10 col-xs-12 col-md-offset-2">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>User Login</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in myInterestedResults" ui-sref="user({userLogin:user.login})">
+          <td>{{ user.id }}</td>
+          <td>{{ user.login }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</home>

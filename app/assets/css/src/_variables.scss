@@ -1,0 +1,75 @@
+// variables across the whole app
+// color scheme of the app
+
+$mainer : lightgray;
+$pinkBanana : pink;
+
+$error-color : #F80853;
+$gray-borders : #ddd;
+$blue-buttons: #139699;
+$blue-titles: #9BCFD0;
+
+$white: #fff;
+$gray : #f0f0f0;
+
+$placeholder: #717171;
+$placeholder2: #aaaaaf;
+
+$grayHR: #979797;
+$whiteButtons: #f5f5f5;
+
+$titlesAndButtons: #2B3A42;
+$buttonActiveOrHover: #4A4A4A;
+
+
+$modalBackExample: #D8EDE7;
+$modalSuccessForm: rgba(100, 100, 100, 0.5);
+$modalSuccessLogoExample: #A66E68;
+
+
+$hourSelect: #dfeeef;
+$weekDaySelect: #ABDDE4;
+$customSelectBorder: #EAE8E7;
+$customSelectWords: #777272;
+$customSelectHover: #f3f3f3;
+
+$arrowGray: #b3b2b2;
+$caretDown: #979797;
+
+$authDetail: #3E4357;
+$includeService: #d9eaea;
+$includeServiceTagDivider: #f7f3f3;
+$bootstrap-555: #555555;
+$bootstrap-ebebeb:#ebebeb;
+
+// mixins
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin transitions ($time, $animtype){
+  -moz-transition: all $time $animtype;
+  -webkit-transition: all $time $animtype;
+  -o-transition: all $time $animtype;
+  transition: all $time $animtype;
+}

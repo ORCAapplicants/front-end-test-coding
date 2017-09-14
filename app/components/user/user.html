@@ -1,0 +1,28 @@
+<user>
+  <section class="container">
+    <h1 class="">
+      Página de prueba para puesto de Front end
+      <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+    </h1>
+  </section>
+  <section ng-if="currentUser && currentUser.login && userData!==false">
+    <div class="media col-md-10 col-sm-10 col-xs-12">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object img-circle" width="140" height="140" ng-src="{{userData.avatar_url}}" alt="Avatar image">
+        </a>
+      </div>
+      <div class="media-body">
+        <p>
+          Name:{{ userData.name }}<br>
+          Bio: {{ userData.bio }}<br>
+          Followers: {{ userData.followers }}<br>
+          Followings: {{ userData.following }}<br>
+          Public Repos: {{ userData.public_repos }}<br>
+        </p>
+
+      </div>
+    </div>
+    <img class="img-circle" src="{currentUser.data.}" alt="Avatar" width="140" height="140">
+  </section>
+</user>
