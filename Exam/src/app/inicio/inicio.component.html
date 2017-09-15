@@ -1,0 +1,85 @@
+
+
+<div class="container">
+	<div class="mt-1">
+		<h1>Consulta usuarios github</h1>
+	</div>
+	<p class="lead">Escribe aqui el nombre del usuario a consultar.</p>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="form-group">
+				<label for="usr">Name:</label>
+				<input type="text" class="form-control" id="usr" [(ngModel)]="user">
+				<button type="button" class="btn btn-block btn-info" (click)="userLoad($event)">Buscar</button>
+				
+			</div>		
+		</div>
+	</div>
+	
+	
+</div>
+<div class="alert alert-danger" *ngIf="alert">
+	<strong>Danger!</strong> No puedes buscar este usuario es cuenta protegida
+</div>
+<div class="alert alert-warning" *ngIf="alertNoUsers">
+	<strong>Alerta!</strong> No se encontraron coincidencias
+</div>
+<div class="container">
+	<div class="row" *ngIf="userSelected" >
+		<div class="col-sm-6">
+			<h3>Usuario Seleccionado:</h3>
+			<hr>
+			<br>
+
+			<p>
+				Usuario: {{userSelected.login}}
+
+			</p>
+			<p>
+				Repositorios: {{userSelected.public_repos}}
+			</p>
+			<button class="btn btn-danger" (click)="clean()">Limpiar</button>
+			<p>
+				<sub>Esta información se carga mediante el segundo componente junto con una promises</sub>
+			</p>
+			<p>
+				Seguidores: {{userSelected.followers}}
+			</p>
+			
+			
+
+		</div>
+		<div class="col-sm-6">
+			<img src="{{userSelected.avatar_url}}" alt="" width="300px" height="300px">	
+		</div>
+
+
+	</div>
+</div>
+<div class="container">
+	<div class="jumbotron" *ngFor="let item of infoUsers">
+
+		<div class="row">
+			<div class="col-sm-12 text-center">
+
+				<h3>Usuario : {{item.login}}</h3> 
+				<hr>
+				<p>
+					Perfil: <a class="btn btn-success" href="https://github.com/{{item.login}}" target="_blank">Ver perfil</a>	
+				</p>
+				
+			
+			<button type="button" class="btn  btn-info" (click)="userInfoLoad(item.login)">Cargar Información</button>
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+</div>
+</div>
