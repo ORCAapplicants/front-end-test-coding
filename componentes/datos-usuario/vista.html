@@ -1,0 +1,57 @@
+<h2 class="animated fadeInDown text-center">Examen técnico</h2>
+<img class="animated flipInX mx-auto d-block" src="./img/logo.jpg">
+<div class="animated zoomIn card" style="margin-top: 50px;">
+    <div class="card-header deep-orange lighten-1 white-text">
+      Datos del Usuario
+    </div>
+    <div class="card-body">
+        <h4 class="animated fadeInDown card-title">Tarjeta del usuario</h4>
+    <section>
+        <div class="row pt-2">
+          <div class="col-lg-5 text-center text-lg-left">
+              <img 
+                ng-src="{{usuario.avatar_url}}"
+                class="img-fluid z-depth-0">
+          </div>
+
+          <div class="col-lg-7">
+              <div class="row pb-3">
+                <div class="col-10">
+                  <h5 class="font-weight-bold text-left mb-3 dark-grey-text">
+                    Login
+                  </h5>
+                  <p class="grey-text text-left">{{usuario.login}}</p>
+                </div>
+              </div>
+
+              <div class="row pb-3">
+                <div class="col-10">
+                  <h5 class="font-weight-bold text-left mb-3 dark-grey-text">
+                    id
+                  </h5>
+                  <p class="grey-text text-left">
+                    {{usuario.id}}
+                  </p>
+                </div>
+              </div>
+
+              <div class="row pb-3">
+                <div class="col-10">
+                  <h5 class="font-weight-bold text-left mb-3 dark-grey-text">
+                    Score
+                  </h5>
+                  <p class="grey-text text-left">
+                    {{usuario.score}}
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
+      <a class="btn btn-deep-orange" ng-href="{{usuario.html_url}}">
+        Ir a la página de {{usuario.login}}
+      </a>
+    </div>
+</div>
+
+
