@@ -1,0 +1,17 @@
+A continuación se enumera los pasos a seguir para instalar y correr
+el proyecto desde la terminal:
+
+1) npm run yarn //hay veces que es necesario correr esta linea con permisos de administrador.
+
+2) yarn install
+
+3) yarn gcp-global
+
+4) ir a un navegador e introducir la dirección http://localhost:8080
+
+Comentarios:
+
+Se implementó todos los pasos a seguir del proyecto, sin embargo al hacer 
+pruebas, hay peticiones que me fueron rechazadas como la petición de los 
+followers por usuario, creo que exedí el número de peticiones, espero mañana
+poder tener acceso y que ustedes vean funcionando esa parte.
