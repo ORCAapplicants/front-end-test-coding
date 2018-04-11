@@ -1,0 +1,31 @@
+{
+  "name": "GCP-GLOBAL-EXAMEN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gcp-global": "http-server",
+    "yarn": "npm install -g yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Francisco Javier Camacho Guerra",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.6",
+    "bootstrap": "^4.1.0",
+    "http-server": "^0.11.1",
+    "jquery": "^3.3.1",
+    "mdbootstrap": "^4.5.0",
+    "zingchart": "^2.7.0",
+    "zingchart-angularjs": "^1.2.0"
+  }
+}

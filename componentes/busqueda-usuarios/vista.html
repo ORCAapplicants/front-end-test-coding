@@ -1,0 +1,80 @@
+<h2 class="animated fadeInDown text-center">Examen técnico</h2>
+<img class="animated animated flipInX mx-auto d-block" src="./img/logo.jpg">
+<form>
+  <div class="animated fadeInDown md-form">
+    <i class="fa fa-user prefix grey-text"></i>
+    <input 
+      type="text" 
+      id="materialFormSubscriptionNameEx" 
+      class="form-control" 
+      ng-model="nombre">
+    <label for="materialFormSubscriptionNameEx">Escribe el nombre a buscar</label>
+  </div>
+  <div class="animated fadeInDown text-center mt-4">
+    <a class="btn btn-info btn-lg" ng-click="validarNombre()">Buscar</a>
+  </div>
+  <div class="animated fadeInDown alert alert-danger" role="alert" ng-show="alerta">
+    <strong>Nombre no válido: </strong>{{mensajeDeValidacion}}
+  </div>
+</form>
+  <div ng-show="carga" class="col-12">
+    <p class="animated bounceIn h4 text-center mb-4">Buscando...</p>
+    <div class="progress">
+      <div 
+        class="animated bounceIn progress-bar progress-bar-striped progress-bar-animated" 
+        style="width: 100%">
+      </div>
+    </div>
+  </div>
+  <div ng-show="error" class="col-12">
+    <p class="animated bounceIn h4 text-center mb-4">
+    Ocurrió un error, intentalo de nuevo</p>
+    <div class="progress">
+      <div 
+        class="animated bounceIn bg-danger progress-bar progress-bar-striped progress-bar-animated " 
+        style="width: 100%">
+      </div>
+    </div>
+  </div>
+
+<h2 ng-show="tabla" class="animated fadeInDown text-center">Selecciona un usuario</h2>
+<div class="animated fadeInDown card" ng-show="tabla">
+  <div class="card-body">
+    <table class="table table-hover table-responsive-md table-fixed">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>login</th>
+          <th>id</th>
+          <th>score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <div class="animated fadeInDown alert alert-danger" role="alert" ng-show="alerta2">
+          {{mensajeDeValidacion}}
+        </div>
+        <style>.puntero {cursor: pointer};</style>
+        <tr
+          ng-repeat="usr in usuarios track by $index"
+          ng-click="obtenerUsuario(usr)">
+          <th scope="row">{{$index+1}}</th>
+          <td class="puntero">{{usr.login}}</td>
+          <td class="puntero">{{usr.id}}</td>
+          <td class="puntero">{{usr.score}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2 ng-show="tabla" class="animated fadeInDown text-center">Seguidores por usuario</h2>
+<div class="row">
+  <div class="col-md-12">
+    <zingchart
+      id="graficaFollowers"
+      zc-json="graficaFollowers"
+      zc-height=600
+      zc-width=1100>
+    </zingchart>
+  </div>
+</div>
