@@ -1,0 +1,132 @@
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ORCA</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#/">Inicio</a></li>      
+      <li ng-controller="LoginController">
+        <a class="page-scroll" href="" ng-click="logout()">Búsqueda</a>
+      </li>
+    </ul>
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#/">Inicio</a></li>            
+      <li ng-controller="LoginController">
+        <a class="page-scroll" href="" ng-click="logout()">Búsqueda</a>
+      </li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+<div class="container fade">
+  <div class="row">
+    <div id="aboutme" class="scrollspy section">
+      <div class="card">
+        <div class="card-content">
+          <h3>Usuario de Github</h3>
+          <p class="col s8 m8 l8 flow-text">
+           {{posta.name}} <strong> - </strong> <small>{{posta.location}}</small>
+          <br>{{posta.bio}}.</p>
+          <img class="circle responsive-img col s4 m4 l4" src="{{posta.avatar_url}}" alt="Img" />
+
+          <a data-ng-init="btnId=poste" ng-controller="LoginController" class="waves-effect waves-light btn-large" ng-click="deletes(btnId)"><i class="material-icons left">delete_forever</i>Eliminar</a>
+
+        </div>
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a class="active about-tab" href="">Detalle</a></li>          
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+          <div id="frontend">
+            <div class="container">
+              <div class="course-div row">
+                <p class="flow-text col s8 m8 l8" alt="description">
+                  <strong>Nombre: </strong>{{posta.name}},<br>
+                  <br><strong>Ubicación: </strong{{posta.location}}><br>
+                </p>
+              </div>
+              <div class="course-div row">
+                <p class="flow-text col s8 m8 l8" alt="description">
+                <strong>Bio<br></strong>{{posta.bio}} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a class="active about-tab" href="">Followers</a></li>          
+          </ul>
+        </div>
+        <div class="cart-conten grey lighten-4">
+          <div id="frontend">
+            <div class="container">
+              <div class="course-div row">
+                <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script type="text/javascript">
+  
+  // Create the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Seguidores. 2018'
+    },
+    subtitle: {
+        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Total percent market share'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
+    /*Pendiente*/
+    "series": [
+        {
+            "name": "Social",
+            "colorByPoint": true,
+            "data": [
+                {
+                    "name": "Seguidores",
+                    "y": 5,
+                    "drilldown": "Followers"
+                },
+                {
+                    "name": "Seguidos",
+                    "y": 12,
+                    "drilldown": "following"
+                }
+            ]
+        }
+    ]
+    
+});
+</script>
+<script src="js/lib/init.js"></script>

@@ -31,26 +31,26 @@ Principalmente los siguientes aspectos:
 
 1. La aplicación debe cumplir con los siguientes **requisitos funcionales:**
 
-    - Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada.
+    - Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada. `terminado`
 
-    - Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (`'user.login'`) y el id (`'user.id'`) de cada registro.
+    - Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario (`'user.login'`) y el id (`'user.id'`) de cada registro. `terminado`
 
-    - Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad `'user.login'` como parámetro.
+    - Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad `'user.login'` como parámetro. `terminado`
 
-    - Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME
+    - Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME `terminado`
 
-    - Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente.
+    - Incluir la imagen del usuario (`'avatar_url'`) y alguna otra información (de su elección) en el componente. `terminado`
 
-    - Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“gcpglobal”**.
+    - Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra **“gcpglobal”**. `pendiente No permitir`
 
-    - Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios.
+    - Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios. `pendiente consumir de API`
 
-    - Incluir un componente para mostrar mensajes de Error en toda la aplicación.
+    - Incluir un componente para mostrar mensajes de Error en toda la aplicación. `terminado sweet alert`
+ 
+    - _Si estas utilizando Angular,_ agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.  `falta`
 
-    - _Si estas utilizando Angular,_ agregar a la declaración del servicio que obtiene los datos un método que utilice `Observables` y otro `Promises`.
+    - _Si estas utilizando Angular,_ agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**. `falta`
 
-    - _Si estas utilizando Angular,_ agregar un `Guard` que no permita consultar el perfil de usuarios con un `'score'` menor a **30.0**.
+2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores. `terminado materializecss`
 
-2. **CSS:** Utilizar algún framework (a elección) para escribir los archivos CSS, tomando en cuenta la compatibilidad con distintos navegadores.
-
-3. **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
+3. **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._) `materializecss`
