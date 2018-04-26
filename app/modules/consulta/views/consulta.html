@@ -1,0 +1,78 @@
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ORCA</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#/">Inicio</a></li>      
+      <li ng-controller="LoginController">
+        <a class="page-scroll" href="" ng-click="logout()">Búsqueda</a>
+      </li>
+    </ul>
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#/">Inicio</a></li>            
+      <li ng-controller="LoginController">
+        <a class="page-scroll" href="" ng-click="logout()">Búsqueda</a>
+      </li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+<style type="text/css">
+  .animated {
+    opacity: 1;
+    max-height: auto;
+    overflow: hidden;
+    transition: all 2s;
+  }
+
+  .animated.ng-hide {
+    opacity: 0;
+    max-height: 0px !important;
+    display: block !important;
+  }
+
+</style>
+
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container-table">
+    <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">search</i>
+          <input type="text" ng-model="searchDude">
+          <label for="autocomplete-input">Buscar usuario</label>          
+        </div>
+      </div>
+      <table class="striped">
+        <thead>
+          <tr>              
+              <th>Id</th>
+              <th>Nombre de usuario</th>
+              <th class="hide-on-small-only">Foto</th>
+              <th class="hide-on-small-only">Opciones</th>
+          </tr>
+        </thead>
+        <tbody ng-controller="LoginController">
+          <tr ng-repeat="post in result | orderBy:sortType:sortReverse | filter:searchDude | limitTo:10">
+            <td><a data-ng-init="btnId=post.login" ng-controller="LoginController" class="edit" href="#/detalle" ng-click="detalle(btnId)">{{post.id}}</a></td>
+            <td><a data-ng-init="btnId=post.login" ng-controller="LoginController" class="edit" href="#/detalle" ng-click="detalle(btnId)">{{post.login}}</a></td>
+            <td class="hide-on-small-only"><img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/picture-64.png" alt=""></td>
+            <td class="hide-on-small-only">
+              <a data-ng-init="btnId=post.idUsuario" ng-controller="LoginController" class="edit" href="#/detalle" ng-click="detalle(btnId)"><i class="material-icons">pageview</i></a>
+              <a ng-show="show" data-ng-init="btnId=post.idUsuario" ng-controller="LoginController" class="delete" href="" ng-click="delete(btnId)"><i class="material-icons">delete_forever</i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+    </div>
+    <br><br>
+  </div>
+</div>
+
+
+<div class="fixed-action-btn">
+  <a href="#/login" class="btn-floating btn-large waves-effect waves-light red modal-trigger"><i class="material-icons">search</i></a>   
+</div>
+
+<script src="js/lib/init.js"></script>

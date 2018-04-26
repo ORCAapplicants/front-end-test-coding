@@ -1,0 +1,78 @@
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ORCA</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#/login">Búsqueda</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#/login">Búsqueda</a></li>
+    </ul>    
+  </div>
+</nav>
+
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container-spo">
+    <br><br>
+    <div class="row center">
+      <h5 class="header col s12 light">
+        <strong>Busqueda</strong>
+      </h5>
+      <div class="row">
+        <div ng-show="error" class="alert alert-danger">{{error}}</div>
+        <form class="col s12" name="form" ng-submit="login()" role="form">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="usuario" id="usuario" class="validate form-control" ng-model="usuario" ng-minlength="4" required/>
+              <span ng-show="form.usuario.$dirty && form.usuario.$error.required" class="help-block alert">Usuario obligatorio</span>
+              <label for="first_name">@Usuario de Github</label>              
+            </div>            
+            <span ng-if="!form.usuario.$valid" class="help-block alert">mínimo de 4 caracteres</span>            
+          </div>
+          <div class="row center">
+            <button type="reset" name="cancelar" class="btn-pri waves-effect waves-light white-spo col s12 m12 l6">Cancelar</button>
+            <button type="submit" ng-disabled="form.$invalid || dataLoading" name="submit" class="btn btn-large waves-effect waves-light red-pri col s12 m12 l6">Ingresar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer black-spo">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Test</h5>
+        <p class="grey-text text-lighten-4">lorem.</p>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer black-spo">
+    <div class="footer-copyright">
+      <div class="container center hide-on-large-only">
+        Developed by <a class="green-text text-lighten-3" href="#">@MemoMogollan</a>
+      </div>
+      <div class="container hide-on-small-only hide-on-med-only">
+        Developed by <a class="green-text text-lighten-3" href="#">@MemoMogollan</a>
+      </div>
+    </div>
+  </footer>
+</footer>
