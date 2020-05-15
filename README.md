@@ -22,7 +22,7 @@ Principalmente los siguientes aspectos:
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 6. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
     * 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [sbreit@awto.cl](mailto:sbreit@awto.cl).
-    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
+    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [sbreit@awto.cl](mailto:sbreit@awto.cl).
 
 ## EJERCICIO PRÁCTICO
 **Objetivo:** Crear una aplicación que ayude a visualizar la informacion obtenida a partir de una dirección ip, explotando la API Rest pública http://ip-api.com/json/{ip}
