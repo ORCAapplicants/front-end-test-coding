@@ -1,0 +1,26 @@
+/* Color primario */
+body{
+    font-family: "Circular Std Bold", Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: rgb(32, 35, 41)!important;
+    padding: 3rem 4rem;
+}
+ul{
+    list-style: none;
+}
+.btn-primary{
+    background-color: #00a3da;
+    color:#fff;
+}
+/* Personalizacion para mostrar JSON de respuesta */
+.bloque_codigo{
+    background:#fcfdfd!important;
+    color: #000;
+    padding: 1rem;
+}
+.bloque_codigo .key{
+    color:#0f374a;
+}
+.bloque_codigo .string{
+    color:#800;
+}
