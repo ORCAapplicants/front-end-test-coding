@@ -12,13 +12,16 @@
         </div>
     </div>
     <!-- Componente -->
-    <Resultado :busqueda="txt_busqueda" :onDemand="cargarComponente" :key="keyComponente" v-if="boolComponente"/>
+    <Resultado :busqueda="txt_busqueda" :onDemand="cargarComponente" :key="keyComponente" v-on:recibirRespuesta="procesarRespuesta"/>    
+    <!-- Componente para mensajes -->
+    <ErrorComponent :key="keyError" :mensaje="mensajeError" :tipo="tipoRespuesta" :opcional="varOpcional"/>
   </div>
 </template>
 
 <script>
 // Componente donde se consultará API y se desplegará resultado
 import Resultado from './_resultado.vue'
+import ErrorComponent from './_errorComponent.vue'
 
 export default {
 	mounted () {},
@@ -29,7 +32,17 @@ export default {
       this.cargarComponente = 1
       // "Deconstruyo" componente, para una actualización "natural"
       this.keyComponente += 1
-      this.boolComponente = true
+    },
+    // Funcion parent, para reaccionar en base a emit de child
+    procesarRespuesta: function (result) {
+        // Determino si necesito mostrar error
+        if(result.status !== 'success'){
+          this.mensajeError = result.message
+          this.tipoRespuesta = result.status
+          this.varOpcional = result.query
+
+          this.keyError += 1
+        }
     }
   },
 	data () {
@@ -39,13 +52,17 @@ export default {
       // Variable para identificar onDemand
       cargarComponente: 0,
 			// Key para vista parcial
-			keyComponente: 0,
-      // Determino si construir o no el componente inicialmente
-      boolComponente: false
+			keyComponente: 1,   
+      // Key para componente de errores
+      keyError: 0,
+      mensajeError: '',
+      tipoRespuesta: '',
+      varOpcional: ''
     }
 	},
 	components: {	
-    Resultado
+    Resultado,
+    ErrorComponent
 	}
 }
 </script>

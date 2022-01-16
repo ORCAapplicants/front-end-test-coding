@@ -1,9 +1,15 @@
 <template>
-     <GmapMap
-      :center='{ lat: this.lat_recibida, lng: this.lng_recibida }'
-      :zoom='12'
-      style='width:100%;  height: 100%'
-    />
+    <GmapMap
+        :center='{ lat: this.lat_recibida, lng: this.lng_recibida }'
+        :zoom='12'
+        style='width:100%;  height: 100%'>
+        <gmap-marker 
+            :position='{ 
+                lat: this.lat_recibida, lng: 
+                this.lng_recibida 
+            }'
+        />      
+    </GmapMap>
 </template>
  
 <script>

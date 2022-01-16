@@ -1,19 +1,23 @@
 <template>
     <div class="row mt-5 justify-content-center">
-        <div class="col-4 bloque_codigo rounded">
-            <samp>
-                {
-                <ul class="ml-3">
-                    <li v-for="(item, index) in this.respuesta" v-bind:key="index" class="mb-2">
-                        <span class="key font-weight-bold">{{ index }}:</span> <span class="string">{{ item }}</span> 
-                    </li>     
-                </ul>       
-                }
-            </samp>
-        </div>
-        <div class="col-6 ml-4">
-            <GoogleMap :lat_recibida="latitud" :lng_recibida="longitud" :key="keyMapa" v-if="boolComponente" />
-        </div>
+        <div class="col-12">                
+            <div class="row" v-if="onDemand === 1 && respuesta && respuesta.status === 'success'">
+                <div class="col-4 bloque_codigo rounded" >
+                    <samp>
+                        {
+                        <ul class="ml-3">
+                            <li v-for="(item, index) in this.respuesta" v-bind:key="index" class="mb-2">
+                                <span class="key font-weight-bold">{{ index }}:</span> <span class="string">{{ item }}</span> 
+                            </li>     
+                        </ul>       
+                        }
+                    </samp>
+                </div>
+                <div class="col-6 ml-4">
+                    <GoogleMap :lat_recibida="latitud" :lng_recibida="longitud" :key="keyMapa" v-if="latitud && longitud" />
+                </div>
+            </div>
+        </div>        
         <!-- Loader -->
         <div class="vld-parent">
             <loading :active.sync="isLoading"
@@ -33,8 +37,7 @@ export default {
     props: {
 		busqueda: {
 			type: String,
-			default: null,
-			required: true
+			default: null
 		},
 		onDemand: {
 			type: Number,
@@ -42,9 +45,17 @@ export default {
 		}
 	},
     methods: {
+        // Limpiar datos
+        limpiarDatos: function () {            
+            this.latitud = null
+            this.longitud = null
+        },
+        // Se realizará comunicación parent to child
+        enviarRespuesta: function () {
+            this.$emit('recibirRespuesta', this.respuesta);
+        }, 
         // Consulto API
 		consultarApi: function () {
-            this.isLoading = true
 			this.axios.get(this.urlApi + this.busqueda, { 
                 // Opciones
             }).then(response => {
@@ -54,18 +65,21 @@ export default {
                     this.longitud = response.data.lon
                     // Reconstruyo componente de mapa
                     this.keyMapa += 1
-                    this.boolComponente = true
-                } else {                    
-                    this.boolComponente = false
+                } else {            
+                    this.limpiarDatos()        
                 }
                 // Guardo data para mostrar en pantalla
                 this.respuesta = response.data
+                // Envio respuesta a parent
+                this.enviarRespuesta()
                 this.isLoading = false
             })
             .catch(error => {
                 console.log(error.response)   
                 this.isLoading = false  
-                this.boolComponente = false
+                this.limpiarDatos()                
+                // Envio respuesta a parent
+                this.enviarRespuesta()
             })
 		},
         onCancel() {
@@ -75,6 +89,7 @@ export default {
 	mounted () {
         // Cargar API siempre y cuando haya sido solicitado
 		if (this.onDemand === 1) {
+            this.isLoading = true
             // Codigo
             this.consultarApi()
 		}
@@ -88,9 +103,7 @@ export default {
             // Deconstruccion de mapa
             keyMapa: 0,
             // Loader        
-            isLoading: false,
-            // Determino si construir o no el componente inicialmente
-            boolComponente: false
+            isLoading: false
         }
 	},
     components: {
